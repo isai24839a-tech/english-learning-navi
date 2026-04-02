@@ -22,7 +22,7 @@ TOEIC対策、単語暗記、オンライン英会話。毎日コツコツ勉強
 
 ## その前に：英語×副業が最強な3つの理由
 
-![副業での収入増加](/images/blog/income-growth.jpg)
+![副業での収入増加](/images/blog/english-learning-navi-english-side-job-01.jpg)
 
 具体的な副業を紹介する前に、なぜ「英語×副業」の組み合わせが強いのか、理由を3つ説明させてください。
 
@@ -46,7 +46,7 @@ TOEIC対策、単語暗記、オンライン英会話。毎日コツコツ勉強
 
 ## 英語副業おすすめ7選
 
-![英語での作業風景](/images/blog/laptop-coffee.jpg)
+![英語での作業風景](/images/blog/english-learning-navi-english-side-job-02.jpg)
 
 ### 1. 翻訳（英日・日英）
 
@@ -100,7 +100,7 @@ TOEIC対策、単語暗記、オンライン英会話。毎日コツコツ勉強
 
 ### 3. 英語ライティング（記事執筆）
 
-![ライティング作業の様子](/images/blog/writing-workspace.jpg)
+![ライティング作業の様子](/images/blog/english-learning-navi-english-side-job-03.jpg)
 
 **必要な英語力：** TOEIC600点〜
 **収入の目安：** 月2〜10万円
@@ -209,7 +209,7 @@ YouTube動画やWebコンテンツの字幕翻訳。Netflix等のプロの字幕
 
 ## 英語レベル別：おすすめ副業ロードマップ
 
-![在宅での副業環境](/images/blog/home-office.jpg)
+![在宅での副業環境](/images/blog/english-learning-navi-english-side-job-04.jpg)
 
 「自分の英語力で何ができるの？」という疑問に答えるべく、英語レベル別のロードマップを作りました。
 
@@ -242,7 +242,7 @@ YouTube動画やWebコンテンツの字幕翻訳。Netflix等のプロの字幕
 
 ## 副業で稼ぎながら英語力を上げるコツ
 
-![英語学習に励む様子](/images/blog/english-study.jpg)
+![英語学習に励む様子](/images/blog/english-learning-navi-english-side-job-05.jpg)
 
 ### コツ1：最初の1件を全力で
 
