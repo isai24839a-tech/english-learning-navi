@@ -79,6 +79,14 @@ Subject: Introduction - [Your Name] from [Company]
 
 Dear Mr./Ms. [Name],
 
+<div class="cta-box">
+<h3>キャリアアップならFast campus</h3>
+<p>現役プロの講師が教える実践型オンラインスクール。今のスキルをワンランク上に引き上げよう。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1ATN+E0VTHE+5Q4A+BWVTE" class="cta-btn" rel="nofollow">Fast campusの講座をチェック →</a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B1ATN+E0VTHE+5Q4A+BWVTE" alt="">
+</div>
+
+
 I hope this email finds you well. My name is [Your Name],
 and I am the [Job Title] at [Company Name].
 
@@ -698,6 +706,14 @@ A. "I apologize for the delayed response." または "Thank you for your patienc
 ### Q. CCとBCCの使い分けは？
 
 A. CC（Carbon Copy）は「この人にも共有してます」の意味。BCC（Blind Carbon Copy）は他の受信者に見えない形で共有。大量の外部宛先にはBCCを使うのがマナー。
+
+<div class="cta-box">
+<h3>Colosoで一流のスキルを身につけよう</h3>
+<p>プログラミング・デザイン・映像制作など、各分野のプロが教える実践講座。買い切りだから自分のペースで学べる。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" class="cta-btn" rel="nofollow">Colosoの講座をチェック →</a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" alt="">
+</div>
+
 
 ### Q. 英語メールで「お疲れ様です」は何て書く？
 

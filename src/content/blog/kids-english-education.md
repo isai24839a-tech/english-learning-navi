@@ -165,6 +165,14 @@ tags: ["英語", "子供", "オンライン英会話"]
 - **Baby Shark**：子供の食いつきが最強。英語版で聞かせるだけでも効果あり
 - **英語の絵本（ボードブック）**：「Brown Bear, Brown Bear, What Do You See?」などの繰り返し系が特におすすめ
 
+<div class="cta-box">
+<h3>プロから学べるオンライン講座 Coloso</h3>
+<p>業界トップクラスの講師陣による実践的なオンライン講座。買い切り型で何度でも復習可能。EPC633円の高収益プログラム。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" class="cta-btn" rel="nofollow">Colosoの講座を見る →</a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" alt="">
+</div>
+
+
 ### 4〜6歳向け：英語アニメと簡単なフレーズ
 
 この時期は短い英語フレーズを覚え始める。「Hello!」「Thank you!」「I like ○○!」などの日常表現を、楽しみながら身につけよう。
@@ -282,6 +290,14 @@ tags: ["英語", "子供", "オンライン英会話"]
 2. **子供の努力を褒める**：「すごいね！」「上手だね！」と声をかける
 3. **一緒に学ぶ姿勢を見せる**：親も一緒に英語の歌を歌ったり、簡単な英語を使ったりする
 4. **プレッシャーをかけない**：楽しむことが最優先
+
+<div class="cta-box">
+<h3>キャリアアップならFast campus</h3>
+<p>現役プロの講師が教える実践型オンラインスクール。今のスキルをワンランク上に引き上げよう。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1ATN+E0VTHE+5Q4A+BWVTE" class="cta-btn" rel="nofollow">Fast campusの講座をチェック →</a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B1ATN+E0VTHE+5Q4A+BWVTE" alt="">
+</div>
+
 
 ### 親も一緒に英語を学ぶメリット
 

@@ -6,6 +6,6 @@ export const CF_BEACON_TOKEN = '';
 // TODO: Replace with your GA4 measurement ID from analytics.google.com
 export const GA_MEASUREMENT_ID = '';
 export const SIDEBAR_ADS = [
-	{ heading: 'オンライン英会話を始めよう', desc: '学研のKimini英会話で毎日25分のレッスン。無料体験あり。', cta: '無料体験する →', url: 'https://af.moshimo.com/af/c/click?a_id=5459880&p_id=3947&pc_id=9844&pl_id=81967', pixel: 'https://i.moshimo.com/af/i/impression?a_id=5459880&p_id=3947&pc_id=9844&pl_id=81967' },
-	{ heading: '子供の英語教育に', desc: 'Global Step Academyでインターナショナルスクール品質のレッスン。', cta: '詳しく見る →', url: 'https://af.moshimo.com/af/c/click?a_id=5459894&p_id=3253&pc_id=7683&pl_id=48632', pixel: 'https://i.moshimo.com/af/i/impression?a_id=5459894&p_id=3253&pc_id=7683&pl_id=48632' },
+	{ heading: 'Colosoで語学力アップ', desc: 'プロ講師によるオンライン講座。買い切り型で自分のペースで学習できる。', cta: 'Colosoを見る →', url: 'https://px.a8.net/svt/ejp?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM', pixel: 'https://www15.a8.net/0.gif?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM' },
+	{ heading: 'Fast campusで学ぶ', desc: 'IT・ビジネス英語など実践型オンラインスクール。キャリアアップに直結。', cta: 'Fast campusを見る →', url: 'https://px.a8.net/svt/ejp?a8mat=4B1ATN+E0VTHE+5Q4A+BWVTE', pixel: 'https://www11.a8.net/0.gif?a8mat=4B1ATN+E0VTHE+5Q4A+BWVTE' },
 ];

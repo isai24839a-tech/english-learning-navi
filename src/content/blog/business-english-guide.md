@@ -207,6 +207,14 @@ tags: ['英語', 'ビジネス英語', '英会話', '仕事']
 2. オンライン英会話のビジネスコース契約
 3. 業界の英語ニュースを毎朝1本読む
 
+<div class="cta-box">
+<h3>Colosoで一流のスキルを身につけよう</h3>
+<p>プログラミング・デザイン・映像制作など、各分野のプロが教える実践講座。買い切りだから自分のペースで学べる。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" class="cta-btn" rel="nofollow">Colosoの講座をチェック →</a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" alt="">
+</div>
+
+
 この3つを1ヶ月間、毎日やりました。
 
 初回のミーティングは正直ほとんど聞き取れなかった。でも、覚えたフレーズのおかげで「I agree with that point.」「Could you say that again, please?」くらいは言えた。最低限の体裁は保てた。
@@ -326,6 +334,14 @@ tags: ['英語', 'ビジネス英語', '英会話', '仕事']
 | ミーティングで自在に発言 | 6ヶ月〜1年 |
 | プレゼンテーション | 6ヶ月〜1年 |
 | 交渉・ディスカッション | 1年以上 |
+
+<div class="cta-box">
+<h3>Fast campusで実践スキルを習得</h3>
+<p>IT・デザイン・ビジネスなど幅広いジャンルのオンライン講座。実務で使えるスキルが身につく。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1ATN+E0VTHE+5Q4A+BWVTE" class="cta-btn" rel="nofollow">Fast campusを見る →</a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B1ATN+E0VTHE+5Q4A+BWVTE" alt="">
+</div>
+
 
 ポイントは、**全部を一度にやろうとしないこと**。まずメールから始めて、次にミーティング、その次にプレゼン——と、段階的にレベルアップしていく。
 

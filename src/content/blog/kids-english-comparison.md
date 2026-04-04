@@ -247,6 +247,14 @@ tags: ["子供英語", "オンライン英会話", "英語教材", "幼児英語
 **月額：** 1,233円〜（税込）
 **特徴：** アメリカNo.1の英語学習アプリ / 5,000以上のアクティビティ
 
+<div class="cta-box">
+<h3>プロから学べるオンライン講座 Coloso</h3>
+<p>業界トップクラスの講師陣による実践的なオンライン講座。買い切り型で何度でも復習可能。EPC633円の高収益プログラム。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" class="cta-btn" rel="nofollow">Colosoの講座を見る →</a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" alt="">
+</div>
+
+
 アメリカの幼稚園や小学校でも使われている実績あり。ディズニーのキャラクターを使ったコンテンツもあって、子供の食いつきがいい。
 
 ### 3. Khan Academy Kids

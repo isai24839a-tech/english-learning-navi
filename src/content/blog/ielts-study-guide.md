@@ -64,6 +64,14 @@ IELTSリスニングは**英・豪・米・加の4カ国のアクセントが登
 **攻略法1：先読みが命**
 音声が流れる前に設問を先読みするのが最重要テクニック。設問を読んでおけば、何を聞き取ればいいかがわかる。
 
+<div class="cta-box">
+<h3>Colosoで一流のスキルを身につけよう</h3>
+<p>プログラミング・デザイン・映像制作など、各分野のプロが教える実践講座。買い切りだから自分のペースで学べる。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" class="cta-btn" rel="nofollow">Colosoの講座をチェック →</a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" alt="">
+</div>
+
+
 **攻略法2：キーワードの言い換え（パラフレーズ）に慣れる**
 IELTSの特徴は、設問と音声で**同じ意味を別の表現で言い換えてくること**。例えば設問に「reduce」と書いてあって、音声では「cut down」と言う。
 
@@ -182,6 +190,14 @@ A. イギリス・オーストラリア・カナダの大学はIELTS、アメリ
 ### Q. 独学で7.0は可能？
 
 A. 可能。ただし6ヶ月〜1年の計画的な勉強が必要。特にライティングとスピーキングは、添削やフィードバックを受ける機会を作ることが重要。
+
+<div class="cta-box">
+<h3>Fast campusで実践スキルを習得</h3>
+<p>IT・デザイン・ビジネスなど幅広いジャンルのオンライン講座。実務で使えるスキルが身につく。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1ATN+E0VTHE+5Q4A+BWVTE" class="cta-btn" rel="nofollow">Fast campusを見る →</a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B1ATN+E0VTHE+5Q4A+BWVTE" alt="">
+</div>
+
 
 ### Q. 受験料はいくら？
 

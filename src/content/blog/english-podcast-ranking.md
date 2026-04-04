@@ -207,6 +207,14 @@ tags: ["ポッドキャスト", "リスニング", "英語学習", "おすすめ
 - インタビュー形式で多様な話し方に触れられる
 - アメリカの「今」がわかる
 
+<div class="cta-box">
+<h3>Colosoで一流のスキルを身につけよう</h3>
+<p>プログラミング・デザイン・映像制作など、各分野のプロが教える実践講座。買い切りだから自分のペースで学べる。</p>
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" class="cta-btn" rel="nofollow">Colosoの講座をチェック →</a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1ATN+E5NABM+5Q4A+5YJRM" alt="">
+</div>
+
+
 ### 12位：The Guardian - Today in Focus
 
 **特徴：** イギリスのThe Guardian紙によるニュースポッドキャスト
