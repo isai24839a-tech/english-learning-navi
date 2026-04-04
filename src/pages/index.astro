@@ -30,7 +30,7 @@ const posts = (await getCollection('blog')).sort(
 			<main>
 				<!-- Hero -->
 				<section class="hero">
-					<h1><br><span class="gradient-text">ペラペラ道場</span>で稼ごう</h1>
+					<h1>3ヶ月後、<br><span class="gradient-text">世界が広がる</span></h1>
 					<p class="hero-sub">オンライン英会話比較・英語学習アプリ・TOEIC対策。初心者が効率よく英語を身につける方法を解説。</p>
 					<a href="/blog" class="hero-btn">記事を読む →</a>
 				</section>
@@ -111,7 +111,7 @@ const posts = (await getCollection('blog')).sort(
 
 				<!-- Bottom CTA -->
 				<section class="cta-box">
-					<h3>まだ迷っている方へ</h3>
+					<h3>英語学習を始めよう</h3>
 					<p>英語は世界を広げる。まずは無料体験で一歩踏み出しましょう。</p>
 					<a href={SIDEBAR_ADS[0].url} class="cta-btn" rel="nofollow">無料体験する →</a>
 					<img border="0" width="1" height="1" src={SIDEBAR_ADS[0].pixel} alt="">
@@ -209,7 +209,7 @@ const posts = (await getCollection('blog')).sort(
 
 					{SIDEBAR_ADS[0] && (
 						<div class="sidebar-ad">
-							<h4>まだ迷ってる？</h4>
+							<h4>英語を始めてみる？</h4>
 							<p>{SIDEBAR_ADS[0].desc}</p>
 							<a href={SIDEBAR_ADS[0].url} class="cta-btn" rel="nofollow">{SIDEBAR_ADS[0].cta}</a>
 							<img border="0" width="1" height="1" src={SIDEBAR_ADS[0].pixel} alt="">
