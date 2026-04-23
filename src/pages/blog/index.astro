@@ -1,10 +1,10 @@
----
+﻿---
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE, SIDEBAR_ADS, ADSENSE_ID } from '../../consts';
+import { SITE_DESCRIPTION, SITE_TITLE, SIDEBAR_ADS, ADSENSE_ID, ADSENSE_ENABLED } from '../../consts';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -23,7 +23,7 @@ const posts = (await getCollection('blog')).sort(
 			}
 			.page-desc {
 				text-align: center;
-				color: rgb(var(--gray));
+				color: #6b7280;
 				margin-bottom: 2em;
 			}
 			.posts-list {
@@ -51,7 +51,7 @@ const posts = (await getCollection('blog')).sort(
 				align-items: center;
 				gap: 0.8em;
 				font-size: 0.8em;
-				color: rgb(var(--gray));
+				color: #6b7280;
 				margin-bottom: 0.4em;
 			}
 			.post-card h3 {
@@ -59,10 +59,11 @@ const posts = (await getCollection('blog')).sort(
 				margin: 0 0 0.3em;
 				line-height: 1.4;
 				border: none;
+				color: #1f2937;
 			}
 			.post-card p {
 				font-size: 0.9em;
-				color: rgb(var(--gray));
+				color: #6b7280;
 				margin: 0;
 				line-height: 1.6;
 			}
@@ -79,7 +80,7 @@ const posts = (await getCollection('blog')).sort(
 		<div class="page-wrapper">
 			<main>
 			<h1 class="page-title">記事一覧</h1>
-			<p class="page-desc">英語学習・英会話上達の記事をお届けします</p>
+			<p class="page-desc">{SITE_DESCRIPTION}</p>
 			<div class="posts-list">
 				{posts.map((post) => (
 					<a href={`/blog/${post.id}/`} class="post-card">
@@ -111,7 +112,7 @@ const posts = (await getCollection('blog')).sort(
 						</div>
 					)}
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -139,7 +140,7 @@ const posts = (await getCollection('blog')).sort(
 						))}
 					</div>
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -160,7 +161,7 @@ const posts = (await getCollection('blog')).sort(
 						</div>
 					)}
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -190,14 +191,14 @@ const posts = (await getCollection('blog')).sort(
 
 					{SIDEBAR_ADS[0] && (
 						<div class="sidebar-ad">
-							<h4>英語を始めてみる？</h4>
+							<h4>まだ迷ってる？</h4>
 							<p>{SIDEBAR_ADS[0].desc}</p>
 							<a href={SIDEBAR_ADS[0].url} class="cta-btn" rel="nofollow">{SIDEBAR_ADS[0].cta}</a>
 							<img border="0" width="1" height="1" src={SIDEBAR_ADS[0].pixel} alt="">
 						</div>
 					)}
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -218,7 +219,7 @@ const posts = (await getCollection('blog')).sort(
 						</div>
 					)}
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -247,7 +248,7 @@ const posts = (await getCollection('blog')).sort(
 						</div>
 					)}
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -275,7 +276,7 @@ const posts = (await getCollection('blog')).sort(
 						))}
 					</div>
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -296,7 +297,7 @@ const posts = (await getCollection('blog')).sort(
 						</div>
 					)}
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -324,7 +325,7 @@ const posts = (await getCollection('blog')).sort(
 						))}
 					</div>
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -345,7 +346,7 @@ const posts = (await getCollection('blog')).sort(
 						</div>
 					)}
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -369,5 +370,6 @@ const posts = (await getCollection('blog')).sort(
 			});
 		});
 	</script>
+	<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f0fb4bab21184064b2defd0c70d04ec3"}'></script><!-- End Cloudflare Web Analytics -->
 	</body>
 </html>

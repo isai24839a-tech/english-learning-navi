@@ -1,11 +1,11 @@
----
+﻿---
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import { SITE_TITLE, SITE_URL, ADSENSE_ID, SIDEBAR_ADS } from '../consts';
+import { SITE_TITLE, SITE_URL, ADSENSE_ID, ADSENSE_ENABLED, SIDEBAR_ADS } from '../consts';
 import { getCollection } from 'astro:content';
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -28,8 +28,9 @@ const posts = (await getCollection('blog')).sort(
 			"datePublished": pubDate.toISOString(),
 			"dateModified": updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
 			"author": {
-				"@type": "Organization",
-				"name": SITE_TITLE
+				"@type": "Person",
+				"name": "ケンタ",
+				"url": new URL("/about", Astro.site).href
 			},
 			"publisher": {
 				"@type": "Organization",
@@ -40,7 +41,8 @@ const posts = (await getCollection('blog')).sort(
 				"@id": Astro.url.href
 			},
 			"articleSection": category || "General",
-			"keywords": tags ? tags.join(", ") : ""
+			"keywords": tags ? tags.join(", ") : "",
+			...(heroImage ? { "image": { "@type": "ImageObject", "url": new URL(heroImage.src, Astro.site).href, "width": 1020, "height": 510 } } : {})
 		})}></script>
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
@@ -71,6 +73,9 @@ const posts = (await getCollection('blog')).sort(
 			}
 			.hero-image img {
 				display: block;
+				width: 100%;
+				max-width: 100%;
+				height: auto;
 				margin: 0 auto;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
@@ -131,7 +136,69 @@ const posts = (await getCollection('blog')).sort(
 			@media (max-width: 720px) {
 				.article-header h1 { font-size: 1.4em; }
 			}
+					.affiliate-disclosure {
+				background: #f0f9ff;
+				border: 1px solid #bae6fd;
+				border-radius: 8px;
+				padding: 0.8em 1em;
+				margin-bottom: 1.5em;
+				font-size: 0.8em;
+				color: #64748b;
+				line-height: 1.5;
+			}
+			.affiliate-disclosure a {
+				color: #3b82f6;
+			}
 		</style>
+
+	<!-- FAQ JSON-LD: auto-extracted from article Q&A sections -->
+	<script is:inline>
+		document.addEventListener('DOMContentLoaded', function() {
+			var faqItems = [];
+			var article = document.querySelector('article');
+			if (!article) return;
+			var headings = article.querySelectorAll('h3');
+			headings.forEach(function(h3) {
+				var text = h3.textContent || '';
+				var qMatch = text.match(/^Q[：:]\s*(.+?)\??$/);
+				if (qMatch) {
+					var question = qMatch[1].replace(/\?$/, '') + '?';
+					var answer = '';
+					var sibling = h3.nextElementSibling;
+					while (sibling && sibling.tagName !== 'H2' && sibling.tagName !== 'H3') {
+						var sibText = sibling.textContent || '';
+						if (sibText.match(/^A[：:]\s*/)) {
+							answer += sibText.replace(/^A[：:]\s*/, '');
+						} else if (sibText.trim()) {
+							answer += sibText.trim();
+						}
+						sibling = sibling.nextElementSibling;
+					}
+					if (answer) {
+						faqItems.push({
+							'@type': 'Question',
+							'name': question,
+							'acceptedAnswer': {
+								'@type': 'Answer',
+								'text': answer
+							}
+						});
+					}
+				}
+			});
+			if (faqItems.length > 0) {
+				var schema = {
+					'@context': 'https://schema.org',
+					'@type': 'FAQPage',
+					'mainEntity': faqItems
+				};
+				var script = document.createElement('script');
+				script.type = 'application/ld+json';
+				script.textContent = JSON.stringify(schema);
+				document.head.appendChild(script);
+			}
+		});
+	</script>
 	</head>
 
 	<body>
@@ -140,7 +207,7 @@ const posts = (await getCollection('blog')).sort(
 			<main>
 				<article>
 					<div class="hero-image">
-						{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+						{heroImage && <Image width={1020} height={510} src={heroImage} alt={title} />}
 					</div>
 					<div class="prose">
 						<div class="article-header">
@@ -161,7 +228,10 @@ const posts = (await getCollection('blog')).sort(
 								</div>
 							)}
 						</div>
-						{ADSENSE_ID && (
+						<div class="affiliate-disclosure">
+							<p>※当サイトはアフィリエイトプログラムに参加しています。記事内のリンクから商品を購入すると、当サイトに報酬が支払われることがあります。詳しくは<a href="/privacy-policy">プライバシーポリシー</a>をご覧ください。</p>
+						</div>
+						{ADSENSE_ENABLED && ADSENSE_ID && (
 							<div class="ad-slot" style="margin: 2em 0; text-align: center; min-height: 100px;">
 								<ins class="adsbygoogle"
 									style="display:block"
@@ -172,7 +242,7 @@ const posts = (await getCollection('blog')).sort(
 							</div>
 						)}
 						<slot />
-						{ADSENSE_ID && (
+						{ADSENSE_ENABLED && ADSENSE_ID && (
 							<div class="article-end-ad">
 								<div class="ad-label">広告</div>
 								<ins class="adsbygoogle"
@@ -201,7 +271,7 @@ const posts = (await getCollection('blog')).sort(
 						<img src="/images/mascot.png" alt="ケンタ" width="64" height="64">
 						<div>
 							<strong>ケンタ</strong>
-							<p>TOEIC 380→845を独学2年で達成した男</p>
+							<p>TOEIC 380→845を独学2年で達成。留学経験なし</p>
 						</div>
 					</div>
 
@@ -214,7 +284,7 @@ const posts = (await getCollection('blog')).sort(
 						</div>
 					)}
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -242,7 +312,7 @@ const posts = (await getCollection('blog')).sort(
 						))}
 					</div>
 
-					{ADSENSE_ID && (
+					{ADSENSE_ENABLED && ADSENSE_ID && (
 						<div class="sidebar-adsense">
 							<div class="ad-label">広告</div>
 							<ins class="adsbygoogle"
@@ -260,18 +330,6 @@ const posts = (await getCollection('blog')).sort(
 							<p>{SIDEBAR_ADS[0].desc}</p>
 							<a href={SIDEBAR_ADS[0].url} class="cta-btn" rel="nofollow">{SIDEBAR_ADS[0].cta}</a>
 							<img border="0" width="1" height="1" src={SIDEBAR_ADS[0].pixel} alt="">
-						</div>
-					)}
-
-					{ADSENSE_ID && (
-						<div class="sidebar-adsense">
-							<div class="ad-label">広告</div>
-							<ins class="adsbygoogle"
-								style="display:block"
-								data-ad-client={ADSENSE_ID}
-								data-ad-slot="auto"
-								data-ad-format="rectangle"
-								data-full-width-responsive="false"></ins>
 						</div>
 					)}
 
@@ -293,22 +351,10 @@ const posts = (await getCollection('blog')).sort(
 
 					{SIDEBAR_ADS[0] && (
 						<div class="sidebar-ad">
-							<h4>英語を始めてみる？</h4>
+							<h4>まだ迷ってる？</h4>
 							<p>{SIDEBAR_ADS[0].desc}</p>
 							<a href={SIDEBAR_ADS[0].url} class="cta-btn" rel="nofollow">{SIDEBAR_ADS[0].cta}</a>
 							<img border="0" width="1" height="1" src={SIDEBAR_ADS[0].pixel} alt="">
-						</div>
-					)}
-
-					{ADSENSE_ID && (
-						<div class="sidebar-adsense">
-							<div class="ad-label">広告</div>
-							<ins class="adsbygoogle"
-								style="display:block"
-								data-ad-client={ADSENSE_ID}
-								data-ad-slot="auto"
-								data-ad-format="rectangle"
-								data-full-width-responsive="false"></ins>
 						</div>
 					)}
 
@@ -318,18 +364,6 @@ const posts = (await getCollection('blog')).sort(
 							<p>{SIDEBAR_ADS[1].desc}</p>
 							<a href={SIDEBAR_ADS[1].url} class="cta-btn" rel="nofollow">{SIDEBAR_ADS[1].cta}</a>
 							<img border="0" width="1" height="1" src={SIDEBAR_ADS[1].pixel} alt="">
-						</div>
-					)}
-
-					{ADSENSE_ID && (
-						<div class="sidebar-adsense">
-							<div class="ad-label">広告</div>
-							<ins class="adsbygoogle"
-								style="display:block"
-								data-ad-client={ADSENSE_ID}
-								data-ad-slot="auto"
-								data-ad-format="rectangle"
-								data-full-width-responsive="false"></ins>
 						</div>
 					)}
 
@@ -350,18 +384,6 @@ const posts = (await getCollection('blog')).sort(
 						</div>
 					)}
 
-					{ADSENSE_ID && (
-						<div class="sidebar-adsense">
-							<div class="ad-label">広告</div>
-							<ins class="adsbygoogle"
-								style="display:block"
-								data-ad-client={ADSENSE_ID}
-								data-ad-slot="auto"
-								data-ad-format="rectangle"
-								data-full-width-responsive="false"></ins>
-						</div>
-					)}
-
 					{SIDEBAR_ADS[1] && (
 						<div class="sidebar-cta-gradient">
 							<h4>読者に人気</h4>
@@ -378,36 +400,12 @@ const posts = (await getCollection('blog')).sort(
 						))}
 					</div>
 
-					{ADSENSE_ID && (
-						<div class="sidebar-adsense">
-							<div class="ad-label">広告</div>
-							<ins class="adsbygoogle"
-								style="display:block"
-								data-ad-client={ADSENSE_ID}
-								data-ad-slot="auto"
-								data-ad-format="rectangle"
-								data-full-width-responsive="false"></ins>
-						</div>
-					)}
-
 					{SIDEBAR_ADS[0] && (
 						<div class="sidebar-ad">
 							<h4>あなたへのおすすめ</h4>
 							<p>{SIDEBAR_ADS[0].desc}</p>
 							<a href={SIDEBAR_ADS[0].url} class="cta-btn" rel="nofollow">{SIDEBAR_ADS[0].cta}</a>
 							<img border="0" width="1" height="1" src={SIDEBAR_ADS[0].pixel} alt="">
-						</div>
-					)}
-
-					{ADSENSE_ID && (
-						<div class="sidebar-adsense">
-							<div class="ad-label">広告</div>
-							<ins class="adsbygoogle"
-								style="display:block"
-								data-ad-client={ADSENSE_ID}
-								data-ad-slot="auto"
-								data-ad-format="rectangle"
-								data-full-width-responsive="false"></ins>
 						</div>
 					)}
 
@@ -427,36 +425,12 @@ const posts = (await getCollection('blog')).sort(
 						))}
 					</div>
 
-					{ADSENSE_ID && (
-						<div class="sidebar-adsense">
-							<div class="ad-label">広告</div>
-							<ins class="adsbygoogle"
-								style="display:block"
-								data-ad-client={ADSENSE_ID}
-								data-ad-slot="auto"
-								data-ad-format="rectangle"
-								data-full-width-responsive="false"></ins>
-						</div>
-					)}
-
 					{SIDEBAR_ADS[0] && (
 						<div class="sidebar-cta-gradient">
 							<h4>見逃してない？</h4>
 							<p>{SIDEBAR_ADS[0].desc}</p>
 							<a href={SIDEBAR_ADS[0].url} class="cta-btn" rel="nofollow">{SIDEBAR_ADS[0].cta}</a>
 							<img border="0" width="1" height="1" src={SIDEBAR_ADS[0].pixel} alt="">
-						</div>
-					)}
-
-					{ADSENSE_ID && (
-						<div class="sidebar-adsense">
-							<div class="ad-label">広告</div>
-							<ins class="adsbygoogle"
-								style="display:block"
-								data-ad-client={ADSENSE_ID}
-								data-ad-slot="auto"
-								data-ad-format="rectangle"
-								data-full-width-responsive="false"></ins>
 						</div>
 					)}
 
@@ -472,5 +446,6 @@ const posts = (await getCollection('blog')).sort(
 			});
 		});
 	</script>
+	<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f0fb4bab21184064b2defd0c70d04ec3"}'></script><!-- End Cloudflare Web Analytics -->
 	</body>
 </html>

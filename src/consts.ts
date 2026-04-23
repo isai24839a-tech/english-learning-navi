@@ -1,7 +1,11 @@
-export const SITE_TITLE = 'ペラペラ道場';
+﻿export const SITE_TITLE = 'ペラペラ道場';
 export const SITE_DESCRIPTION = 'オンライン英会話比較・英語学習アプリ・TOEIC対策。初心者が効率よく英語を身につける方法を解説。';
 export const SITE_URL = 'https://english-learning-navi.pages.dev';
 export const ADSENSE_ID = 'ca-pub-6380707752924195';
+// Controls whether <ins class="adsbygoogle"> slots are rendered.
+// Keep ADSENSE_ID populated so the review script in BaseHead still loads (Google審査継続用),
+// but leave this flag `false` until AdSense approval AND real data-ad-slot IDs are configured.
+export const ADSENSE_ENABLED = false;
 export const CF_BEACON_TOKEN = '';
 // TODO: Replace with your GA4 measurement ID from analytics.google.com
 export const GA_MEASUREMENT_ID = '';
